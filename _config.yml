@@ -4,6 +4,9 @@ description:    "Minimal Jekyll theme for storytellers"
 baseurl:        "/tale"
 url:            "https://stormasm.github.io"
 
+# Google Analytics
+google_analytics: UA—XXXXXXXX-X
+
 # Author
 author:
   name:         Chester How
@@ -12,6 +15,8 @@ author:
 
 # Build settings
 markdown:       kramdown
+include:
+  - _pages
 
 # Assets
 sass:
@@ -22,8 +27,15 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-seo-tag
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
 permalink:      /:year-:month-:day/:title
 paginate:       5
+
+# Excludes
+exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+
+# Disqus (Set to your disqus id)
+disqus:         jekyll-tale
